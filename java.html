@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/main.js"></script>
+    <title>Jason Dean Loomis</title>
+</head>
+<body>
+    <header>
+    <div class="full-width">
+      <div class="half-width">
+        <h1>Jason Dean Loomis</h1>
+      </div>
+      <div class="half-width">
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#fun_activity">Fun</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h2><span>Hi,</span> I'm a developer that loves clean &amp; elegant code.</h2>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="full-width">
+        <h2>Favorite Music Video</h2>
+        <div class="half-width">
+          <p><iframe width="560" height="315" src="https://www.youtube.com/embed/fYxvzkZcBq8" title="YouTube video player" 
+                     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="full-width">
+        <div class="third-width">
+            <h3>Java Fun</h3>
+            <p>
+                <button onclick="myMove()">Click Me</button>
+            </p>
+
+        <div id="myContainer">
+            <div id="myAnimation"></div>
+        </div>
+
+    <script>
+        var id = null;
+
+        function myMove() {
+          var elem = document.getElementById("myAnimation");
+          var pos = 0;
+          clearInterval(id);
+          id = setInterval(frame, 10);
+          function frame() {
+            if (pos == 350) {
+                            clearInterval(id);
+            } else {
+                            pos++;
+              elem.style.top = pos + 'px';
+              elem.style.left = pos + 'px';
+            }
+          }
+        }
+    </script>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+      <div class="full-width">
+        <div class="half-width">
+          <img src="images/chalkboard_web.png" id="contact-img" alt="contact image">
+        </div>
+        <div class="half-width">
+          <h2>Like what you see?</h2>
+          <h3 id="email-header">Let's meet for a cup of coffee.</h3>
+          <a href="mailto:jdl@jasondeanloomis.com"><img src="images/envelope.png" id="envelope" alt="Email Icon">jdl@jasondeanloomis.com</a>
+          <h3 id="socialmedia-header">Or find me on the web...</h3>
+
+          <ul>
+            <li><a href=""><img src="images/twitter.png" alt="Twitter Icon"></a></li>
+            <li><a href=""><img src="images/tumblr.png" alt="Tumblr Icon"></a></li>
+            <li><a href=""><img src="images/instagram.png" alt="Instagram Icon"></a></li>
+            <li><a href=""><img src="images/linkedin.png" alt="LinkedIn Icon"></a></li>
+            <li><a href=""><img src="images/github.png" alt="GitHub Icon"></a></li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+        
+
+</body>
+</html>
